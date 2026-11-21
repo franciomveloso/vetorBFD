@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor Distribuidora | API e Gestão de Dados</title>
+    <!-- Fontes modernas do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'distribuidora/css/style.css' %}">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <a href="{% url 'home' %}" class="logo" aria-label="Vetor Distribuidora Home">
+                <span class="logo-vetor">Vetor</span>
+                <span class="logo-cross"></span>
+                <span class="logo-distribuidora">Distribuidora</span>
+            </a>
+
+            <nav class="nav">
+                <a href="/api/docs/" class="nav-link">API Docs</a>
+                <a href="/api/redoc/" class="nav-link">ReDoc</a>
+                <a href="/api/clientes/" class="nav-link">Clientes</a>
+                <a href="/api/vendedores/" class="nav-link">Vendedores</a>
+                <a href="/admin/" class="nav-btn">Painel Admin</a>
+            </nav>
+        </header>
+
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">Django REST Framework • v1.0</span>
+                <h1>Vetor<br>Distribuidora</h1>
+                <p class="hero-subtitle">
+                    Plataforma e API REST desenvolvida em Django para integração, normalização e gerenciamento estratégico de clientes e vendedores.
+                </p>
+                <div class="hero-actions">
+                    <a href="/api/redoc/" class="btn btn-primary">
+                        <span>Documentação API (ReDoc)</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="/api/docs/" class="btn btn-secondary">Explorar Swagger</a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="map-frame">
+                    <img src="{% static 'distribuidora/img/mapa-brasilia.png' %}" alt="Mapa de atuação da Vetor Distribuidora no Distrito Federal">
+                    <div class="map-caption">
+                        <span class="status-dot"></span>
+                        Cobertura operacional • Distrito Federal e Entorno
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grade Alternada 1 -->
+        <section class="feature-row">
+            <div class="card card-green-medium">
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                </div>
+                <h2>Soluções de Distribuição</h2>
+                <p>
+                    Conectamos sua operação ao mercado com inteligência e agilidade, mapeando carteiras de clientes por região e otimizando rotas de atendimento comercial.
+                </p>
+            </div>
+
+            <div class="feature-list-box">
+                <h3>Recursos Principais da API</h3>
+                <ul class="check-list">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>CRUD completo de clientes</strong>
+                            <span>Cadastro, consulta, atualização e remoção de registros normalizados</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Consultas por bairro e vendedor</strong>
+                            <span>Filtros dinâmicos e endpoints relacionais para segmentação rápida</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Gerenciamento de vendedores</strong>
+                            <span>Controle estruturado da equipe comercial e carteiras vinculadas</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Autenticação segura com DRF Token</strong>
+                            <span>Emissão e validação de tokens para integração externa</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Grade Alternada 2 -->
+        <section class="feature-row">
+            <div class="feature-list-box">
+                <h3>Governança e Permissões</h3>
+                <ul class="check-list">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Recursos protegidos por autenticação</strong>
+                            <span>Endpoints de escrita liberados exclusivamente para usuários autenticados</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Operações de edição e exclusão (CRUD)</strong>
+                            <span>Integridade referencial garantida no banco relacional</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Consultas públicas abertas via API REST</strong>
+                            <span>Leitura rápida via requisições GET para consumo de dados</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card card-green-dark">
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <h2>Segurança e Controle</h2>
+                <p>
+                    Acesso restrito a usuários autenticados para operações de escrita, edição e exclusão, mantendo consultas públicas abertas e documentação interativa padronizada via OpenAPI e ReDoc.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p class="footer-copy">© 2026 Vetor Distribuidora. Todos os direitos reservados.</p>
+                <p class="footer-sub">Projeto Django de Integração, ETL e Distribuição de Dados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/api/docs/">Swagger UI</a>
+                <a href="/api/redoc/">ReDoc</a>
+                <a href="/admin/">Admin</a>
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
